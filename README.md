@@ -1,7 +1,9 @@
 # spotifind
-Spotify and Tunefind Bridge Simple CLI
+Combined Spotify and Tunefind Simple Command Line Tool
 
 ![Python Version](https://img.shields.io/badge/python-%3E%3D3.2-blue)
+
+![spotifind_transparent_copy](https://user-images.githubusercontent.com/6677629/77322716-8489ec80-6cea-11ea-8d1c-bd2b6e598d21.jpg)
 
 [Tunefind is a music search website](https://www.tunefind.com/) which helps to find music featured in television series and movies. Users can suggest songs related to TV show or movie.If approved, song will be listed on that page.
 
