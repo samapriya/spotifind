@@ -3,9 +3,9 @@ Spotify and Tunefind Bridge Simple CLI
 
 ![Python Version](https://img.shields.io/badge/python-%3E%3D3.2-blue)
 
-Tunefind is a music search website which helps to find music featured in television series and movies. Users can suggest songs related to TV show or movie.If approved, song will be listed on that page.
+[Tunefind is a music search website](https://www.tunefind.com/) which helps to find music featured in television series and movies. Users can suggest songs related to TV show or movie.If approved, song will be listed on that page.
 
-Spotify is a digital music streaming service that gives you access to millions of songs, podcasts and videos from artists all over the world, like Apple Music and Amazon Music Unlimited.
+[Spotify is a digital music streaming service](https://www.spotify.com/) that gives you access to millions of songs, podcasts and videos from artists all over the world, like Apple Music and Amazon Music Unlimited.
 
 Over the span of the last week as people are cooped up working from home, I thought it would be a fun project, to think about soundtracks. I was just getting a new spotify premium account and though you can probably find public playlists for almost any TV series, I thought it would be fun to link Tunefind and Spotify to do this for user generated TV show lists.
 
