@@ -39,7 +39,6 @@ setuptools.setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Operating System :: OS Independent',
-        'Topic :: Music :: Music',
     ),
     author='Samapriya Roy',
     author_email='samapriya.roy@gmail.com',
