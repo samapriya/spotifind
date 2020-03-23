@@ -16,7 +16,7 @@ Spotifind (Spotify+Tunefind) is a tool designed to first authorize and authentic
 ![spotifind_main](https://user-images.githubusercontent.com/6677629/77280532-fafefe00-6c9a-11ea-9cf8-be0ff9c0f1fd.png)
 
 There are two requirements for this tool:
-* You have a premium spotify account
+* You have a spotify account
 * Create a new [spotify client here]
 
 Spotify client setup needs two main steps
