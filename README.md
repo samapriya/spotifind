@@ -112,13 +112,17 @@ The tool setup is
 
 ```
 > spotifind spot_tune -h
-usage: spotifind spot_tune [-h] [--url URL] [--name NAME] [--desc DESC]
+usage: spotifind spot_tune [-h] --url URL --name NAME --desc DESC --playlist
+                           PLAYLIST
 
 optional arguments:
-  -h, --help   show this help message and exit
-  --url URL    Tunefind series url
-  --name NAME  Spotify playlist name
-  --desc DESC  Spotify Playlist Description
+  -h, --help           show this help message and exit
+
+Required named arguments.:
+  --url URL            Tunefind series url
+  --name NAME          Spotify playlist name
+  --desc DESC          Spotify Playlist Description
+  --playlist PLAYLIST  public or private
 ```
 
 ![spotifind_spot_tune](https://user-images.githubusercontent.com/6677629/77282763-3270a900-6ca1-11ea-9a1e-99bf3eb38f8e.gif)
