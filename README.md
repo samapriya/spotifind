@@ -1,6 +1,7 @@
 # spotifind
 Combined Spotify and Tunefind Simple Command Line Tool
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3726351.svg)](https://doi.org/10.5281/zenodo.3726351)
 ![Python Version](https://img.shields.io/badge/python-%3E%3D3.2-blue)
 
 ![spotifind_transparent_copy](https://user-images.githubusercontent.com/6677629/77322716-8489ec80-6cea-11ea-8d1c-bd2b6e598d21.jpg)
