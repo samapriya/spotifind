@@ -131,3 +131,9 @@ spotifind spot_tune --url "https://www.tunefind.com/show/self-made-inspired-by-t
 
 This was a weekend project and so much fun to implement. For now this will be maintained ad hoc and I hope to add more spotify tools inspired by some amazing projects out there and since you are authorizing yourelf with all scopes why not explore more :)
 
+## Changelog
+
+### v0.0.3
+* Added pagination to get all tracklist
+* Overall improvements
+* Applied Fuzzy song search
