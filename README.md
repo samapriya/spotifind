@@ -138,6 +138,9 @@ This was a weekend project and so much fun to implement. For now this will be ma
 
 ## Changelog
 
+### v0.0.4
+* Replaced fuzzywuzzy with [rapidfuzz](https://github.com/samapriya/spotifind/pull/1)
+
 ### v0.0.3
 * Added pagination to get all tracklist
 * Overall improvements
