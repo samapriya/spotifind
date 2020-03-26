@@ -23,7 +23,7 @@ setuptools.setup(
     version='0.0.3',
     packages=['spotifind'],
     url='https://github.com/samapriya/spotifind',
-    install_requires=['requests>=2.21.1','logzero>=1.5.0','beautifulsoup4>=4.8.2','fuzzywuzzy>=0.18.0'],
+    install_requires=['requests>=2.21.1','logzero>=1.5.0','beautifulsoup4>=4.8.2','rapidfuzz>=0.2.2'],
     license='Apache 2.0',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',

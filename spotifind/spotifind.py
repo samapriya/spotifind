@@ -28,7 +28,7 @@ import base64
 import sys
 import getpass
 import webbrowser
-from fuzzywuzzy import fuzz
+from rapidfuzz import fuzz
 from logzero import logger
 from os.path import expanduser
 from bs4 import BeautifulSoup
