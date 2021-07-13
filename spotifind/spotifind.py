@@ -345,9 +345,9 @@ def tuneparse(url, spotify_token):
             if spage.status_code == 200:
                 sn = songlist.split("/")[3]
                 soup = BeautifulSoup(spage.content, "html.parser")
-                season = soup.findAll("div", {"EpisodePage__title___MiEq3"})
+                season = soup.findAll("div", {"EpisodePage_title__29C3E"})
                 episode = season[0].select("h1")[0].string.split(" ")[0]
-                links = soup.findAll("div", {"class": "SongRow__container___3eT_L"})
+                links = soup.findAll("div", {"class": "SongRow_container__1bNtb"})
                 for link in links:
                     song = str(link.findAll("a")[0].string)
                     artist = link.findAll("a")[1].string
