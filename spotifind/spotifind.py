@@ -2,7 +2,7 @@ from __future__ import print_function
 
 __copyright__ = """
 
-    Copyright 2020 Samapriya Roy
+    Copyright 2021 Samapriya Roy
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -345,7 +345,7 @@ def tuneparse(url, spotify_token):
             if spage.status_code == 200:
                 sn = songlist.split("/")[3]
                 soup = BeautifulSoup(spage.content, "html.parser")
-                season = soup.findAll("div", {"EpisodePage_title__29C3E"})
+                season = soup.findAll("div", {"class": "EpisodePage_title__29C3E"})
                 episode = season[0].select("h1")[0].string.split(" ")[0]
                 links = soup.findAll("div", {"class": "SongRow_container__1bNtb"})
                 for link in links:
