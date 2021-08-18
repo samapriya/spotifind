@@ -409,7 +409,7 @@ def tunemain(url, name, desc, ptype):
         page_url = resp.json().get("next")
         resp = requests.get(page_url, headers=headers)
         handle_page(resp)
-    ulist = list(set(uri_list) - set(tunelist))
+    ulist = [track for track in dict.fromkeys(uri_list) if track not in set(tunelist)]
     if len(ulist) == 0:
         print('')
         logger.info("All songs exists in playlist")
