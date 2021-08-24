@@ -138,6 +138,10 @@ This was a weekend project and so much fun to implement. For now this will be ma
 
 ## Changelog
 
+### v0.0.5
+- Pull [request 2](https://github.com/samapriya/spotifind/pull/2)
+- fix old css classes, keep tracks sorted
+
 ### v0.0.4
 * Replaced fuzzywuzzy with [rapidfuzz](https://github.com/samapriya/spotifind/pull/1)
 
