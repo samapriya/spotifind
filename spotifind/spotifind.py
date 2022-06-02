@@ -2,7 +2,7 @@ from __future__ import print_function
 
 __copyright__ = """
 
-    Copyright 2021 Samapriya Roy
+    Copyright 2022 Samapriya Roy
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -180,7 +180,7 @@ def spot_refresh_from_parser(args):
 uri_list = []
 
 
-def get_spotify_uri(sn, episode, song_name, artist, spotify_token):
+def get_spotify_uri(season, episode, song_name, artist, spotify_token):
     """Search For the Song and artist"""
     query = "https://api.spotify.com/v1/search?query=track%3A{}+artist%3A{}&type=track&offset=0&limit=20".format(
         song_name, artist
@@ -199,8 +199,8 @@ def get_spotify_uri(sn, episode, song_name, artist, spotify_token):
         uri = songs[0]["uri"]
         uri_list.append(uri)
         logger.info(
-            "{} {} Found Song: {} with artist: {}".format(
-                sn, episode, songs[0]["name"], songs[0]["artists"][0]["name"]
+            "{}, {}, Found Song: \"{}\" by artist: \"{}\"".format(
+                season, episode, songs[0]["name"], songs[0]["artists"][0]["name"]
             )
         )
     elif response.status_code == 200 and response.json()["tracks"]["total"] == 0:
@@ -337,32 +337,29 @@ def add_song_to_playlist(playlist_id, urlist, name, spotify_token):
 def tuneparse(url, spotify_token):
     page = requests.get(url)
     soup = BeautifulSoup(page.content, "html.parser")
-    links = soup.select("h5")
+    links = soup.select("h3")
     for link in links:
         songlist = link.select("a")[0].get("href")
-        if songlist.endswith("songs"):
-            spage = requests.get(MAIN_URL + songlist)
-            if spage.status_code == 200:
-                sn = songlist.split("/")[3]
-                soup = BeautifulSoup(spage.content, "html.parser")
-                season = soup.findAll("div", {"class": "EpisodePage_title__29C3E"})
-                episode = season[0].select("h1")[0].string.split(" ")[0]
-                links = soup.findAll("div", {"class": "SongRow_container__1bNtb"})
-                for link in links:
-                    song = str(link.findAll("a")[0].string)
-                    artist = link.findAll("a")[1].string
-                    # print("{} {} Song: {} Artist: {}".format(sn, episode, song, artist))
-                    get_spotify_uri(
-                        sn,
-                        episode,
-                        song.replace("'", ""),
-                        artist.replace("'", ""),
-                        spotify_token,
-                    )
-                    time.sleep(0.5)
-
-            else:
-                print("Failed with status code " + str(spage.status_code))
+        spage = requests.get(MAIN_URL + songlist)
+        if spage.status_code == 200:
+            soup = BeautifulSoup(spage.content, "html.parser")
+            sn = soup.select("div[class^=EpisodePage_title_]")
+            season = sn[0].select("h2")[0].string
+            episode = sn[0].select("h1")[0].string.split(" ")[0]
+            links = soup.select("div[class^=SongRow_container_]")
+            for link in links:
+                song = str(link.findAll("a")[0].string)
+                artist = link.findAll("a")[1].string
+                get_spotify_uri(
+                    season,
+                    episode,
+                    song.replace("'", ""),
+                    artist.replace("'", ""),
+                    spotify_token,
+                )
+                time.sleep(0.5)
+        else:
+            print("Failed with status code " + str(spage.status_code))
 
 
 tunelist = []
@@ -412,7 +409,7 @@ def tunemain(url, name, desc, ptype):
     ulist = [track for track in dict.fromkeys(uri_list) if track not in set(tunelist)]
     if len(ulist) == 0:
         print('')
-        logger.info("All songs exists in playlist")
+        logger.info("All songs exist in playlist")
     elif len(ulist) > 0 and len(ulist) <= 100:
         print('')
         logger.info("Total number of songs to add: {}".format(len(ulist)))
