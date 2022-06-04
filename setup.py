@@ -12,7 +12,7 @@ def readme():
         return f.read()
 setuptools.setup(
     name='spotifind',
-    version='0.0.5',
+    version='0.0.6',
     packages=['spotifind'],
     url='https://github.com/samapriya/spotifind',
     install_requires=['requests>=2.21.1','logzero>=1.5.0','beautifulsoup4>=4.8.2','rapidfuzz>=1.5.0'],
