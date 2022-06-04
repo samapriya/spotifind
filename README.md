@@ -1,8 +1,12 @@
 # spotifind
 Combined Spotify and Tunefind Simple Command Line Tool
 
+[![Twitter URL](https://img.shields.io/twitter/follow/samapriyaroy?style=social)](https://twitter.com/intent/follow?screen_name=samapriyaroy)
+[![Hits-of-Code](https://hitsofcode.com/github/samapriya/spotifind?branch=master)](https://hitsofcode.com/github/samapriya/spotifind?branch=master)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5242608.svg)](https://doi.org/10.5281/zenodo.5242608)
-![Python Version](https://img.shields.io/badge/python-%3E%3D3.2-blue)
+[![CI spotifind](https://github.com/samapriya/spotifind/actions/workflows/CI.yml/badge.svg)](https://github.com/samapriya/spotifind/actions/workflows/CI.yml)
+[![PyPI version](https://badge.fury.io/py/spotifind.svg)](https://badge.fury.io/py/spotifind)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/spotifind)
 
 ![spotifind_transparent_copy](https://user-images.githubusercontent.com/6677629/77322716-8489ec80-6cea-11ea-8d1c-bd2b6e598d21.jpg)
 
